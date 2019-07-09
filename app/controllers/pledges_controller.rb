@@ -26,6 +26,20 @@ class PledgesController < ApplicationController
                 render :new
             end 
     end
+
+    def edit
+        @pledge = Pledge.find(params[:id])
+    end
+
+    def update 
+        @pledge = Pledge.find(params[:id])
+        if @pledge.update(pledge_params)
+            redirect_to pledge_path(@pledge)
+        else
+            render :edit
+        end 
+    end 
+    
     
     def destroy
         @pledge = Pledge.find(params[:id])
@@ -36,7 +50,7 @@ class PledgesController < ApplicationController
     private 
 
     def pledge_params 
-        params.require(:pledge).permit(:amount, :user_id, :charity_id)
+        params.require(:pledge).permit(:amount, :pledge_id, :charity_id)
     end 
 
     

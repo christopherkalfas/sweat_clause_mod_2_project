@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :charities
   resources :pledges 
+  resources :groups
+  resources :challenge
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

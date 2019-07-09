@@ -10,12 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_195331) do
+ActiveRecord::Schema.define(version: 2019_07_09_180641) do
+
+  create_table "challenges", force: :cascade do |t|
+    t.string "name"
+    t.string "activity"
+    t.integer "activity_reps"
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "group_id"
+    t.integer "charity_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "charities", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +55,7 @@ ActiveRecord::Schema.define(version: 2019_07_08_195331) do
     t.integer "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "group_id"
   end
 
 end

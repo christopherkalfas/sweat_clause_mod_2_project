@@ -2,18 +2,18 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @username.name %>
+  <%= @user.name %>
 </p>
 
 <p>
   <strong>Username:</strong>
-  <%= @username.username %>
+  <%= @user.username %>
 </p>
 
 
 <p>
   <strong>Age:</strong>
-  <%= @username.age %>
+  <%= @user.age %>
 </p>
 
 <p>
@@ -26,5 +26,9 @@
   <%= @user.weight %>
 </p>
 
+<p>
+  <strong>Group:</strong>
+  <%= link_to(@user.group.name, group_path(@user.group_id)) %>
+</p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
