@@ -1,0 +1,19 @@
+
+<h1><%= @pledge.amount %></h1>
+<p>Charity Name: <%= link_to(@pledge.charity.name, pledge_path(@pledge)) %></p>
+
+
+
+<p>
+  <strong:>Amount:</strong:></strong>
+  <%= @pledge.amount %>
+</p>
+
+
+
+
+
+<%= link_to('All Pledges', pledges_path) %> |
+
+
+<%= link_to("Edit", edit_pledge_path(@pledge)) %>

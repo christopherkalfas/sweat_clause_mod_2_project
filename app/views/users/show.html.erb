@@ -1,0 +1,30 @@
+<h1>Welcome to Push-Up</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @username.name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @username.username %>
+</p>
+
+
+<p>
+  <strong>Age:</strong>
+  <%= @username.age %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @user.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @user.weight %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

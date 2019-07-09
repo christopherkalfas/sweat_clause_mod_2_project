@@ -1,0 +1,13 @@
+<%= form_for(@pledge) do |f| %>
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+    <%= f.collection_select(:charity_id, Charity.all, :id, :name) %>
+  </div>
+
+  
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

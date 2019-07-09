@@ -1,0 +1,22 @@
+
+<h1><%= @charity.name %></h1>
+
+
+
+<p>
+  <strong>Description:</strong>
+  <%= @charity.description %>
+</p>
+
+
+<p>
+  <strong>Website:</strong>
+  <%= @charity.url %>
+</p>
+
+
+
+<%= link_to('All Charities', charities_path) %> |
+
+
+<%= link_to("Edit", edit_charity_path(@charity)) %>

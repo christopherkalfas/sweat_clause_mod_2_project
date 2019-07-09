@@ -1,0 +1,9 @@
+<%= form_tag(charities_path) do %>
+
+<%= text_field_tag("charity[name]", nil, placeholder: "Charity Name") %>
+<%= text_area_tag("charity[description]", nil, placeholder: "Charity Description") %>
+<%= text_field_tag("charity[url]", nil, placeholder: "Charity Website") %>
+
+<%= submit_tag("Save") %>
+
+<% end %>
