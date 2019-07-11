@@ -1,0 +1,63 @@
+<h1><%= @challenge.name %></h1>
+<p>
+<strong>Charity Name: <%= link_to(@challenge.charity.name, charity_path(@challenge.charity)) %></strong>
+</p>
+
+
+
+<p>
+  <strong>Activity:</strong>
+  <%= @challenge.activity %>
+</p>
+
+<p>
+  <strong>Challenge Start-Date: </strong>
+  <%= @challenge.start_date %>
+</p>
+
+<p>
+  <strong>Challenge End-Date: </strong>
+  <%= @challenge.end_date %>
+</p>
+
+<p>
+  <strong>Challenge Group: </strong>
+  <%= link_to(@challenge.group.name, group_path(@challenge.group)) %>
+<ul>
+<strong>Particpating Members: </strong> 
+  <% @challenge.group.users.each do |user| %>
+    <li><%= link_to(user.name, user_path(user)) %></li>
+  <% end %>
+</ul>
+</p>
+<br>
+<br>
+
+
+<h2>Challenge Trackers<h2>
+<table class="ctable" style="margin-left: 50px;">
+  <tr>
+    <th><h2>Name</h2></th>
+    <th><h2>Day of the Week</h2></th> 
+    <th><h2>Reps</h2></th>
+  </tr>
+  <% @challenge.activity_trackers.each do | tracker | %>
+    <tr>
+      <td><%= tracker.user.name %></td>
+      <td><%= tracker.day %></td>
+      <td><%= tracker.user_reps %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+
+<br>
+<br>
+<br>
+
+<h2><%= link_to('All challenges', challenges_path) %> |
+
+
+<%= link_to("Edit", edit_challenge_path(@challenge)) %></h2>

@@ -1,7 +1,18 @@
-<%= form_tag(charities_path) do %>
+<h2>Add a Charity You Would Like to Nominate for 'Challenges'</h2>
 
+<%= form_tag(charities_path) do %>
+<p>
+<strong>Charity Name:</strong> 
+<br>
 <%= text_field_tag("charity[name]", nil, placeholder: "Charity Name") %>
+<br>
+<br>
+<strong>Tell us About the Charity </strong><br>
 <%= text_area_tag("charity[description]", nil, placeholder: "Charity Description") %>
+<br>
+<br>
+<strong>Charity Website </strong>
+<br>
 <%= text_field_tag("charity[url]", nil, placeholder: "Charity Website") %>
 
 <%= submit_tag("Save") %>

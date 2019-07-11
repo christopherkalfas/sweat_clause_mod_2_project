@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_180641) do
+ActiveRecord::Schema.define(version: 2019_07_10_145946) do
+
+  create_table "activity_trackers", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "challenge_id"
+    t.string "day"
+    t.integer "user_reps"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "challenges", force: :cascade do |t|
     t.string "name"

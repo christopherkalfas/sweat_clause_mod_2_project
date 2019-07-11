@@ -1,3 +1,16 @@
 // Place all the styles related to the charities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pic {
+    display: inline-block;
+    margin: 10px;
+}
+
+img {
+    width: 250px;
+}
+
+.pic  {
+    border: 5px solid lightgrey;
+}

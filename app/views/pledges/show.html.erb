@@ -1,11 +1,11 @@
 
-<h1><%= @pledge.amount %></h1>
-<p>Charity Name: <%= link_to(@pledge.charity.name, pledge_path(@pledge)) %></p>
+<h1>Charity Name: <%= link_to(@pledge.charity.name, charity_path(@pledge.charity)) %></h1>
+<h2><%= @pledge.amount %></h2>
 
 
 
 <p>
-  <strong:>Amount:</strong:></strong>
+  <strong>Amount:</strong>
   <%= @pledge.amount %>
 </p>
 
@@ -13,7 +13,7 @@
 
 
 
-<%= link_to('All Pledges', pledges_path) %> |
+<h2><%= link_to('All Pledges', pledges_path) %> |
 
 
-<%= link_to("Edit", edit_pledge_path(@pledge)) %>
+<%= link_to("Edit", edit_pledge_path(@pledge)) %></h2>

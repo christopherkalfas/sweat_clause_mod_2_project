@@ -1,0 +1,16 @@
+<%= form_for(@activity_tracker) do |f| %>
+  <div class="field">
+    <%= f.label :day %>
+    <%= f.select :day, ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] %>
+    <%= f.label "Challenge" %>
+    <%= f.collection_select(:challenge_id, Challenge.all, :id, :name) %>
+    <%= f.label :user_reps %>
+    <%= f.number_field :user_reps %>
+  </div>
+
+  
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

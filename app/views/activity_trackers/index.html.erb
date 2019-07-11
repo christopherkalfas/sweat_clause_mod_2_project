@@ -1,0 +1,34 @@
+<h1> All User-Challenge Activity Trackers </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><h2>Name</h2></th>
+      <th><h2>Challenge</h2></th>
+      
+      
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activity_trackers.each do |activity_tracker| %>
+      <tr>
+        
+        <td><%= link_to(activity_tracker.user.name, user_path(activity_tracker.user)) %></td>
+        <td><%= link_to(activity_tracker.challenge.name, challenge_path(activity_tracker.challenge)) %></td>
+        <br>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<h2><%= link_to 'Add a Tracker for a Challenge', new_activity_tracker_path %></h2>
+<br>
+<br>
+
+<h2><%= link_to("All Users", users_path) %></h2>
+<h2><%= link_to('All Challenges', challenges_path) %></h2>
+
