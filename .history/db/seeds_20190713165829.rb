@@ -11,7 +11,8 @@ Group.destroy_all
 
 
 g1 = Group.create([
-    {name: "Club Chris"}
+    {name: "Club Chris"},
+    {name: "Group 2"},
 ])
 
 
